@@ -75,6 +75,7 @@
   }
   if (S.liveStatus === false || !server.host) {
     if (pill) pill.hidden = true;
+    all('.stats').forEach(function (el) { el.hidden = true; });
     return;
   }
   var ctrl = typeof AbortController === 'function' ? new AbortController() : null;

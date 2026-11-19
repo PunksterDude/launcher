@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SZERVERNÉV Launcher</title>
+  <meta name="description" content="Töltsd le a SZERVERNÉV launchert: Microsoft bejelentkezés, automatikus mod- és textúracsomag-telepítés, egy kattintással a szerverre.">
+  <meta name="theme-color" content="#0E1116">
+  <meta property="og:title" content="SZERVERNÉV Launcher">
+  <meta property="og:description" content="Egy kattintás, és már a szerveren vagy – a Conquest_ textúracsomaggal együtt.">
+  <meta property="og:image" content="assets/img/2-home.png">
+  <link rel="icon" type="image/png" href="assets/img/icon.png">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <img src="assets/img/icon.png" alt="" width="24" height="24">
+        <span><span data-name>SZERVERNÉV</span> Launcher</span>
+      </a>
+      <nav class="nav-links" aria-label="Fő navigáció">
+        <a href="#telepites">Telepítés</a>
+        <a href="#kepek">Képek</a>
+        <a href="#gyik">GYIK</a>
+        <a class="btn btn-sm" href="#letoltes" data-download>Letöltés</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="letoltes">
+      <div class="blocks" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="chips">
+            <span class="chip chip-accent">Minecraft <span data-mc>1.21.11</span></span>
+            <span class="chip">Fabric kliens</span>
+            <span class="chip">Conquest_ textúrák</span>
+          </div>
+          <h1 class="display" data-name>SZERVERNÉV</h1>
+          <p class="lead" data-tagline>Rövid szlogen a szerverről</p>
+          <p class="muted" data-description>Egy kattintás, és már a szerveren vagy – a Conquest_ textúracsomaggal és minden szükséges moddal együtt.</p>
+
+          <div class="cta">
+            <a class="btn btn-big" href="#" data-download download>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6 11 6 6 6-6"/><path d="M5 21h14"/></svg>
+              Letöltés Windowsra
+            </a>
+            <p class="meta">
+              <span>v<span data-version>1.1.0</span></span><span class="dot">·</span>
+              <span data-size>116 MB</span><span class="dot">·</span>
+              <span>Windows 10 / 11 (64 bit)</span>
+            </p>
+          </div>
+        </div>
+
+        <aside class="card status" aria-live="polite">
+          <div class="row-between">
+            <h2 class="h3">Szerver státusz</h2>
+            <span class="pill" data-status-pill><span class="led"></span><span data-status-text>Lekérdezés…</span></span>
+          </div>
+          <div class="stats">
+            <div>
+              <div class="label-caps">Játékosok</div>
+              <div class="stat" data-players>– / –</div>
+            </div>
+            <div>
+              <div class="label-caps">Verzió</div>
+              <div class="stat" data-mc>1.21.11</div>
+            </div>
+          </div>
+          <div class="addr">
+            <code data-address>85.155.121.26:19003</code>
+            <button class="icon-btn" type="button" data-copy aria-label="Cím másolása">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <p class="small muted">A launcher magától erre a címre csatlakozik, ezt nem kell beírnod sehova.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Előnyök -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">MIÉRT A LAUNCHER?</p>
+        <h2 class="h2">Semmit nem kell kézzel telepítened</h2>
+        <div class="features">
+          <article class="card feature">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
+            <h3 class="h4">Textúracsomag előre bekapcsolva</h3>
+            <p class="muted">A Conquest_ pack és a hozzá ajánlott modok automatikusan letöltődnek és bekapcsolnak. Nincs külön letöltés, nincs „resource pack” kérdés belépéskor.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+            <h3 class="h4">Mindig naprakész</h3>
+            <p class="muted">Minden indításkor ellenőrzi a fájlokat, és csak azt tölti le, ami változott. Ha a szerver modot cserél, nálad is kicserélődik.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3 class="h4">Hivatalos Microsoft belépés</h3>
+            <p class="muted">A Microsoft saját bejelentkező ablakát használja, a jelszavad nem jut el a launcherhez. Eredeti Minecraft: Java Edition szükséges.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></div>
+            <h3 class="h4">Egyenesen a szerverre</h3>
+            <p class="muted">A „Játék” gomb elindítja a Minecraftot és rögtön csatlakozik. Ha nem sikerül, a játékon belül egy kattintással újrapróbálhatod.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M1 14h6"/><path d="M9 8h6"/><path d="M17 16h6"/></svg></div>
+            <h3 class="h4">Gyors és szép</h3>
+            <p class="muted">Sodium a jobb FPS-ért, Zoomify a nagyításhoz (C gomb), és opcionálisan Iris shaderekhez – OptiFine nélkül.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3z"/><path d="M8 7V4h8v3"/></svg></div>
+            <h3 class="h4">Külön játékmappa</h3>
+            <p class="muted">Saját mappába telepít, a meglévő <code>.minecraft</code> mappádhoz, mentéseidhez és modjaidhoz nem nyúl. Java-t sem kell külön telepítened.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Telepítés -->
+    <section class="section" id="telepites">
+      <div class="container">
+        <p class="eyebrow">TELEPÍTÉS</p>
+        <h2 class="h2">Három lépés, és bent vagy</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="num">1</span>
+            <h3 class="h4">Töltsd le és futtasd</h3>
+            <p class="muted">Kattints a <a href="#" data-download download>Letöltés</a> gombra, majd nyisd meg a letöltött <code data-filename>telepítőt</code>.</p>
+          </li>
+          <li class="card step">
+            <span class="num">2</span>
+            <h3 class="h4">Ha a Windows rákérdez</h3>
+            <p class="muted">A „Windows megvédte a számítógépet” ablakban kattints a <strong>További információ</strong>, majd a <strong>Futtatás mindenképp</strong> gombra. <a href="#gyik-smartscreen">Miért?</a></p>
+          </li>
+          <li class="card step">
+            <span class="num">3</span>
+            <h3 class="h4">Lépj be és játssz</h3>
+            <p class="muted">Jelentkezz be a Microsoft fiókoddal, nyomd meg a <strong>Játék</strong> gombot. Az első indítás pár percig tart, mert letölti a játékot és a textúrákat.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Képek -->
+    <section class="section" id="kepek">
+      <div class="container">
+        <p class="eyebrow">KÉPEK</p>
+        <h2 class="h2">Így néz ki</h2>
+        <div class="shots">
+          <figure class="shot shot-main">
+            <img src="assets/img/2-home.png" width="1280" height="760" alt="A launcher főoldala: Játék gomb, hírek, szerver státusz" loading="lazy">
+            <figcaption>Főoldal: hírek, szerver státusz és a Játék gomb</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/1-login.png" width="1280" height="760" alt="Bejelentkezés Microsoft fiókkal" loading="lazy">
+            <figcaption>Bejelentkezés Microsoft fiókkal</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/5-update.png" width="1280" height="760" alt="Fájlok letöltése és ellenőrzése" loading="lazy">
+            <figcaption>Automatikus frissítés</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/3-settings.png" width="1280" height="760" alt="Beállítások: memória, felbontás" loading="lazy">
+            <figcaption>Beállítások: memória, felbontás</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/4-mods.png" width="1280" height="760" alt="A telepített modok listája" loading="lazy">
+            <figcaption>A telepített modok</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- GYIK -->
+    <section class="section" id="gyik">
+      <div class="container narrow">
+        <p class="eyebrow">GYIK</p>
+        <h2 class="h2">Gyakori kérdések</h2>
+        <div class="faq">
+          <details id="gyik-smartscreen">
+            <summary>Miért figyelmeztet a Windows, hogy a fájl nem biztonságos?</summary>
+            <p>A Windows SmartScreen minden olyan programra figyelmeztet, amelyhez nem tartozik drága, fizetős kódaláíró tanúsítvány, és amit még kevesen töltöttek le. Ez nem jelenti azt, hogy vírusos. Ha biztos akarsz lenni benne, hogy a fájl a miénk, ellenőrizd az ujjlenyomatát (lent).</p>
+          </details>
+          <details>
+            <summary>Kell hozzá eredeti Minecraft?</summary>
+            <p>Igen. A launcher a hivatalos Microsoft bejelentkezést használja, ezért egy olyan Microsoft fiók kell, amelyen megvan a Minecraft: Java Edition.</p>
+          </details>
+          <details>
+            <summary>Mennyi helyet foglal, és hova telepít?</summary>
+            <p>A launcher kb. 300 MB, a játék a Javával, a textúracsomaggal és a modokkal együtt további kb. 1–1,5 GB. A játékfájlok a <code>%APPDATA%</code> alatti külön mappába kerülnek, a meglévő <code>.minecraft</code> mappádat nem módosítja.</p>
+          </details>
+          <details>
+            <summary>Használhatom a saját modjaimat?</summary>
+            <p>Igen, a játékmappa <code>mods</code> mappájába tett saját modokhoz a launcher nem nyúl. Csak arra figyelj, hogy Fabric <span data-mc>1.21.11</span> verziójúak legyenek.</p>
+          </details>
+          <details>
+            <summary>Hogyan frissítem a launchert?</summary>
+            <p>A modok és a textúrák maguktól frissülnek. Ha a launchernek új verziója jön ki, töltsd le innen és telepítsd a régi fölé – a belépésed és a beállításaid megmaradnak.</p>
+          </details>
+          <details>
+            <summary>Nem tudok csatlakozni, „Failed to log in” hibát kapok.</summary>
+            <p>Ilyenkor általában a Mojang szerverei korlátoznak, ha rövid idő alatt sokszor próbálkozol. Várj pár percet, majd a játékban a „Csatlakozás a szerverhez” gombbal próbáld újra – a játékot nem kell bezárni.</p>
+          </details>
+        </div>
+
+        <div class="card verify">
+          <div class="label-caps">TELEPÍTŐ UJJLENYOMATA (SHA-256)</div>
+          <code class="hash" data-sha256>8E598F3FFC080941E08445B617573DACA7707A2C0AD7F52073218EA0C760788C</code>
+          <p class="small muted">Ellenőrzés PowerShellben: <code>Get-FileHash .\<span data-filename>telepítő</span></code> – a kiírt értéknek egyeznie kell ezzel.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Záró CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="card final">
+          <div>
+            <h2 class="h2">Találkozunk a szerveren!</h2>
+            <p class="muted">v<span data-version>1.1.0</span> · <span data-date>2026. november 19.</span></p>
+          </div>
+          <div class="final-actions">
+            <a class="btn btn-ghost" href="#" data-discord hidden>Discord</a>
+            <a class="btn" href="#" data-download download>Letöltés Windowsra</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> <span data-name>SZERVERNÉV</span></p>
+      <p class="small">NEM HIVATALOS MINECRAFT TERMÉK. NEM A MOJANG VAGY A MICROSOFT HAGYTA JÓVÁ, ÉS NEM ÁLL KAPCSOLATBAN VELÜK.<br>A Conquest_ textúracsomagot a launcher a szerző hivatalos Modrinth oldaláról tölti le.</p>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

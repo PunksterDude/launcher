@@ -1,248 +1,46 @@
 <!doctype html>
 <html lang="hu">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Valdheim Launcher</title>
-  <meta name="description" content="Töltsd le a Valdheim launchert: Microsoft bejelentkezés, automatikus mod- és textúracsomag-telepítés, egy kattintással a szerverre.">
-  <meta name="theme-color" content="#0E1116">
-  <meta property="og:title" content="Valdheim Launcher">
-  <meta property="og:description" content="Északi kalandvilág – egy kattintással a szerveren, a Conquest_ textúracsomaggal együtt.">
-  <meta property="og:image" content="assets/img/2-home.png">
-  <link rel="icon" type="image/png" href="assets/img/icon.png">
-  <link rel="stylesheet" href="assets/fonts/fonts.css">
-  <link rel="stylesheet" href="assets/style.css?v=1.2.0">
-  <script src="config.js?v=1.2.0"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Valdheim Launcher</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0e1014;color:#e8e6e1;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+form{width:min(340px,90vw);padding:28px;border:1px solid #2a2e36;border-radius:12px;background:#15181e}
+h1{margin:0 0 6px;font-size:20px}p{margin:0 0 18px;color:#9aa0aa;font-size:14px}
+input{width:100%;padding:11px 12px;border-radius:8px;border:1px solid #2f343d;background:#0e1014;color:inherit;font-size:15px}
+button{margin-top:12px;width:100%;padding:11px;border:0;border-radius:8px;background:#c9a24a;color:#14110a;font-weight:600;font-size:15px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}#err{min-height:18px;margin-top:10px;color:#e0786b;font-size:13px}
+</style>
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#">
-        <img src="assets/img/icon.png" alt="" width="24" height="24">
-        <span><span data-name>Valdheim</span> Launcher</span>
-      </a>
-      <nav class="nav-links" aria-label="Fő navigáció">
-        <a href="#telepites">Telepítés</a>
-        <a href="#kepek">Képek</a>
-        <a href="#gyik">GYIK</a>
-        <a class="btn btn-sm" href="#letoltes" data-download>Letöltés</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="letoltes">
-      <div class="blocks" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="chips">
-            <span class="chip chip-accent">Minecraft <span data-mc>1.21.11</span></span>
-            <span class="chip">Fabric kliens</span>
-            <span class="chip">Conquest_ textúrák</span>
-          </div>
-          <h1 class="display" data-name>Valdheim</h1>
-          <p class="lead" data-tagline>Írd meg a saját sagádat.</p>
-          <p class="muted" data-description>Hideg fjordok, ősi erődök és el nem mesélt legendák. A launcherrel egy kattintás, és már bent is vagy – a Conquest_ textúracsomaggal és minden szükséges moddal együtt.</p>
-
-          <div class="cta">
-            <a class="btn btn-big" href="#" data-download download>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6 11 6 6 6-6"/><path d="M5 21h14"/></svg>
-              Letöltés Windowsra
-            </a>
-            <p class="meta">
-              <span>v<span data-version>1.2.0</span></span><span class="dot">·</span>
-              <span data-size>116 MB</span><span class="dot">·</span>
-              <span>Windows 10 / 11 (64 bit)</span>
-            </p>
-          </div>
-        </div>
-
-        <aside class="card status" aria-live="polite">
-          <div class="row-between">
-            <h2 class="h3">Szerver státusz</h2>
-            <span class="pill" data-status-pill><span class="led"></span><span data-status-text>Lekérdezés…</span></span>
-          </div>
-          <div class="stats">
-            <div>
-              <div class="label-caps">Játékosok</div>
-              <div class="stat" data-players>– / –</div>
-            </div>
-            <div>
-              <div class="label-caps">Verzió</div>
-              <div class="stat" data-mc>1.21.11</div>
-            </div>
-          </div>
-          <div class="addr">
-            <code data-address>85.155.121.26:19003</code>
-            <button class="icon-btn" type="button" data-copy aria-label="Cím másolása">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-            </button>
-          </div>
-          <p class="small muted">A launcher magától erre a címre csatlakozik, ezt nem kell beírnod sehova.</p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Előnyök -->
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">MIÉRT A LAUNCHER?</p>
-        <h2 class="h2">Semmit nem kell kézzel telepítened</h2>
-        <div class="features">
-          <article class="card feature">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
-            <h3 class="h4">Textúracsomag előre bekapcsolva</h3>
-            <p class="muted">A Conquest_ pack és a hozzá ajánlott modok automatikusan letöltődnek és bekapcsolnak. Nincs külön letöltés, nincs „resource pack” kérdés belépéskor.</p>
-          </article>
-          <article class="card feature">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-            <h3 class="h4">Mindig naprakész</h3>
-            <p class="muted">Minden indításkor ellenőrzi a fájlokat, és csak azt tölti le, ami változott. Ha a szerver modot cserél, nálad is kicserélődik.</p>
-          </article>
-          <article class="card feature">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-            <h3 class="h4">Hivatalos Microsoft belépés</h3>
-            <p class="muted">A Microsoft saját bejelentkező ablakát használja, a jelszavad nem jut el a launcherhez. Eredeti Minecraft: Java Edition szükséges.</p>
-          </article>
-          <article class="card feature">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></div>
-            <h3 class="h4">Egyenesen a szerverre</h3>
-            <p class="muted">A „Játék” gomb elindítja a Minecraftot és rögtön csatlakozik. Ha nem sikerül, a játékon belül egy kattintással újrapróbálhatod.</p>
-          </article>
-          <article class="card feature">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M1 14h6"/><path d="M9 8h6"/><path d="M17 16h6"/></svg></div>
-            <h3 class="h4">Gyors és szép</h3>
-            <p class="muted">Sodium a jobb FPS-ért, Zoomify a nagyításhoz (C gomb), és opcionálisan Iris shaderekhez – OptiFine nélkül.</p>
-          </article>
-          <article class="card feature">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3z"/><path d="M8 7V4h8v3"/></svg></div>
-            <h3 class="h4">Külön játékmappa</h3>
-            <p class="muted">Saját mappába telepít, a meglévő <code>.minecraft</code> mappádhoz, mentéseidhez és modjaidhoz nem nyúl. Java-t sem kell külön telepítened.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Telepítés -->
-    <section class="section" id="telepites">
-      <div class="container">
-        <p class="eyebrow">TELEPÍTÉS</p>
-        <h2 class="h2">Három lépés, és bent vagy</h2>
-        <ol class="steps">
-          <li class="card step">
-            <span class="num">1</span>
-            <h3 class="h4">Töltsd le és futtasd</h3>
-            <p class="muted">Kattints a <a href="#" data-download download>Letöltés</a> gombra, majd nyisd meg a letöltött <code data-filename>telepítőt</code>.</p>
-          </li>
-          <li class="card step">
-            <span class="num">2</span>
-            <h3 class="h4">Ha a Windows rákérdez</h3>
-            <p class="muted">A „Windows megvédte a számítógépet” ablakban kattints a <strong>További információ</strong>, majd a <strong>Futtatás mindenképp</strong> gombra. <a href="#gyik-smartscreen">Miért?</a></p>
-          </li>
-          <li class="card step">
-            <span class="num">3</span>
-            <h3 class="h4">Lépj be és játssz</h3>
-            <p class="muted">Jelentkezz be a Microsoft fiókoddal, nyomd meg a <strong>Játék</strong> gombot. Az első indítás pár percig tart, mert letölti a játékot és a textúrákat.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Képek -->
-    <section class="section" id="kepek">
-      <div class="container">
-        <p class="eyebrow">KÉPEK</p>
-        <h2 class="h2">Így néz ki</h2>
-        <div class="shots">
-          <figure class="shot shot-main">
-            <img src="assets/img/2-home.png" width="1280" height="760" alt="A launcher főoldala: Játék gomb, hírek, szerver státusz" loading="lazy">
-            <figcaption>Főoldal: hírek, szerver státusz és a Játék gomb</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/img/1-login.png" width="1280" height="760" alt="Bejelentkezés Microsoft fiókkal" loading="lazy">
-            <figcaption>Bejelentkezés Microsoft fiókkal</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/img/5-update.png" width="1280" height="760" alt="Fájlok letöltése és ellenőrzése" loading="lazy">
-            <figcaption>Automatikus frissítés</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/img/3-settings.png" width="1280" height="760" alt="Beállítások: memória, felbontás" loading="lazy">
-            <figcaption>Beállítások: memória, felbontás</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/img/4-mods.png" width="1280" height="760" alt="A telepített modok listája" loading="lazy">
-            <figcaption>A telepített modok</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- GYIK -->
-    <section class="section" id="gyik">
-      <div class="container narrow">
-        <p class="eyebrow">GYIK</p>
-        <h2 class="h2">Gyakori kérdések</h2>
-        <div class="faq">
-          <details id="gyik-smartscreen">
-            <summary>Miért figyelmeztet a Windows, hogy a fájl nem biztonságos?</summary>
-            <p>A Windows SmartScreen minden olyan programra figyelmeztet, amelyhez nem tartozik drága, fizetős kódaláíró tanúsítvány, és amit még kevesen töltöttek le. Ez nem jelenti azt, hogy vírusos. Ha biztos akarsz lenni benne, hogy a fájl a miénk, ellenőrizd az ujjlenyomatát (lent).</p>
-          </details>
-          <details>
-            <summary>Kell hozzá eredeti Minecraft?</summary>
-            <p>Igen. A launcher a hivatalos Microsoft bejelentkezést használja, ezért egy olyan Microsoft fiók kell, amelyen megvan a Minecraft: Java Edition.</p>
-          </details>
-          <details>
-            <summary>Mennyi helyet foglal, és hova telepít?</summary>
-            <p>A launcher kb. 300 MB, a játék a Javával, a textúracsomaggal és a modokkal együtt további kb. 1–1,5 GB. A játékfájlok a <code>%APPDATA%</code> alatti külön mappába kerülnek, a meglévő <code>.minecraft</code> mappádat nem módosítja.</p>
-          </details>
-          <details>
-            <summary>Használhatom a saját modjaimat?</summary>
-            <p>Igen, a játékmappa <code>mods</code> mappájába tett saját modokhoz a launcher nem nyúl. Csak arra figyelj, hogy Fabric <span data-mc>1.21.11</span> verziójúak legyenek.</p>
-          </details>
-          <details>
-            <summary>Hogyan frissítem a launchert?</summary>
-            <p>A modok és a textúrák maguktól frissülnek. Ha a launchernek új verziója jön ki, töltsd le innen és telepítsd a régi fölé – a belépésed és a beállításaid megmaradnak.</p>
-          </details>
-          <details>
-            <summary>Nem tudok csatlakozni, „Failed to log in” hibát kapok.</summary>
-            <p>Ilyenkor általában a Mojang szerverei korlátoznak, ha rövid idő alatt sokszor próbálkozol. Várj pár percet, majd a játékban a „Csatlakozás a szerverhez” gombbal próbáld újra – a játékot nem kell bezárni.</p>
-          </details>
-        </div>
-
-        <div class="card verify">
-          <div class="label-caps">TELEPÍTŐ UJJLENYOMATA (SHA-256)</div>
-          <code class="hash" data-sha256>162A4F36DBA1858116ACF3EDB2CAD0BE68E1F36A3FCBB0D6500D1C3F92C44DEB</code>
-          <p class="small muted">Ellenőrzés PowerShellben: <code>Get-FileHash .\<span data-filename>telepítő</span></code> – a kiírt értéknek egyeznie kell ezzel.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Záró CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="card final">
-          <div>
-            <h2 class="h2">Találkozunk a szerveren!</h2>
-            <p class="muted">v<span data-version>1.2.0</span> · <span data-date>2026. november 19.</span></p>
-          </div>
-          <div class="final-actions">
-            <a class="btn btn-ghost" href="#" data-discord hidden>Discord</a>
-            <a class="btn" href="#" data-download download>Letöltés Windowsra</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span data-year>2026</span> <span data-name>Valdheim</span></p>
-      <p class="small">NEM HIVATALOS MINECRAFT TERMÉK. NEM A MOJANG VAGY A MICROSOFT HAGYTA JÓVÁ, ÉS NEM ÁLL KAPCSOLATBAN VELÜK.<br>A Conquest_ textúracsomagot a launcher a szerző hivatalos Modrinth oldaláról tölti le.</p>
-    </div>
-  </footer>
-
-  <script src="assets/site.js?v=1.2.0"></script>
+<form id="f" autocomplete="off">
+<h1>Valdheim Launcher</h1>
+<p>Az oldal megtekintéséhez jelszó szükséges.</p>
+<input id="pw" type="password" placeholder="Jelszó" aria-label="Jelszó" autofocus required>
+<button id="go" type="submit">Belépés</button>
+<div id="err" role="alert"></div>
+</form>
+<script>
+const D={"s":"8VjjebAMQnorOWGcC5cqug==","i":"soJUkSEsWn3dNHJK","c":"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"};
+const u=s=>Uint8Array.from(atob(s),ch=>ch.charCodeAt(0));
+async function open_(pw){
+  const e=new TextEncoder();
+  const b=await crypto.subtle.importKey('raw',e.encode(pw),'PBKDF2',false,['deriveKey']);
+  const k=await crypto.subtle.deriveKey({name:'PBKDF2',salt:u(D.s),iterations:600000,hash:'SHA-256'},b,{name:'AES-GCM',length:256},false,['decrypt']);
+  const p=await crypto.subtle.decrypt({name:'AES-GCM',iv:u(D.i)},k,u(D.c));
+  return new TextDecoder().decode(p);
+}
+function show(html){document.open();document.write(html);document.close();}
+const f=document.getElementById('f'),go=document.getElementById('go'),err=document.getElementById('err');
+f.addEventListener('submit',async ev=>{
+  ev.preventDefault();go.disabled=true;err.textContent='';
+  const pw=document.getElementById('pw').value;
+  try{const h=await open_(pw);try{sessionStorage.setItem('vh_pw',pw)}catch(_){}show(h);}
+  catch(_){err.textContent='Hibás jelszó.';go.disabled=false;}
+});
+(async()=>{let s=null;try{s=sessionStorage.getItem('vh_pw')}catch(_){}if(s){try{show(await open_(s))}catch(_){}}})();
+</script>
 </body>
 </html>
